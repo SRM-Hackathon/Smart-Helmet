@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Activityhome</string>
     <string name="Registration">Registration</string>
+    <string name="Track_your_vehicle">    Track your vehicle    </string>
+
 </resources>

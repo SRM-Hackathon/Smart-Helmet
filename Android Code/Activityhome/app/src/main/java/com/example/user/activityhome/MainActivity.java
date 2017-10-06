@@ -1,5 +1,10 @@
 package com.example.user.activityhome;
 
+import android.content.Context;
+import android.content.Intent;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
@@ -15,6 +20,29 @@ private EditText fname1,lname1,track1a,track2a,vehname1;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        LocationManager lm= (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+        LocationListener locationListener=new LocationListener() {
+            @Override
+            public void onLocationChanged(Location location) {
+         //Log.i("location",location.toString());
+            }
+
+            @Override
+            public void onStatusChanged(String provider, int status, Bundle extras) {
+
+            }
+
+            @Override
+            public void onProviderEnabled(String provider) {
+
+            }
+
+            @Override
+            public void onProviderDisabled(String provider) {
+
+            }
+        };
+
         fname1 = (EditText) findViewById(R.id.fname);
         lname1 = (EditText) findViewById(R.id.Lname);
         vehname1 = (EditText) findViewById(R.id.vehname);
@@ -25,7 +53,10 @@ nextstep =(Button) findViewById(R.id.btn);
             @Override
             public void onClick(View v) {
                 function_one();
+                Intent myIntent = new Intent(v.getContext(), Main2Activity.class);
+                startActivity(myIntent);
             }
+
         });
     }
     public  void function_one()
