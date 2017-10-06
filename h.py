@@ -8,7 +8,7 @@ count=0
 while 1:
     input=a.input(8)
     if input==0:
-        os.system('/home/pi/program/pushbullet.sh "Your friend has met with an accident"')             
+        os.system('/home/pi/program/pushbullet.sh "Your friend has met with an accident at"')             
         print"vibration occured"
           
       
