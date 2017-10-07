@@ -16,7 +16,7 @@ a.setup(7,a.OUT)
 a.setup(13,a.OUT)
 
 
-slack_client = SlackClient("xoxb-188960937920-Iw7ZaKyYXmLit327b4WP70un")
+slack_client = SlackClient("xoxb-188960937920-eAEE7oDvaZYiAGudtMZsblWb")
 
 
 
@@ -104,14 +104,14 @@ if slack_client.rtm_connect():
                             if count==2 and input==1:
                                 time.sleep(5)
 
-                                os.system('/home/pi/program/pushbullet.sh "Your friend has met with an.The location is :https://maps.google.com/?q=25.130364,75.8302516"')             
+                                os.system('/home/pi/program/pushbullet.sh "Your friend has met with an accident.The location is : https://www.google.co.in/maps/@12.824836,80.046946"')             
                                 time.sleep(50)
 
                   
                 if re.match(r'.*(video).*', message_text, re.IGNORECASE):
                     camera=PiCamera()
                     camera.start_preview()
-                    camera.start_recording('/media/pi/KARTHIK/ne.h264')
+                    camera.start_recording('/media/pi/2015-6DEA/ne.h264')
                     sleep(10)
                     camera.stop_recording()
                     camera.stop_preview()
