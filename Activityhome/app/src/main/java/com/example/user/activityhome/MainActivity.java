@@ -90,15 +90,15 @@ if(firstname.isEmpty()||firstname.length()>12)
     }
     if(vehicle_No.isEmpty()||vehicle_No.length()>12)
     {
-        vehname1.setError("please enter valid name");
+        vehname1.setError("please enter valid Vehicle number");
         valid=false;
     }
-    if(track1.isEmpty()||track2.length()>12)
+    if(track1.length()<10||track1.length()>10)
     {
-        track1a.setError("please enter valid name");
+        track1a.setError("please enter valid phone number");
         valid=false;
     }
-    if(track2.isEmpty()||track2.length()>12)
+    if(track2.length()<10||track2.length()>10)
     {
         track2a.setError("please enter valid name");
         valid=false;
